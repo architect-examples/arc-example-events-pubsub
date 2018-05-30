@@ -1,9 +1,10 @@
 // readonly polls the 'api' for tasks
 async function read() {
   try {
-    let url = window.location.pathname + '/api'
+    let url = '/api'
     let res = await fetch(url, {
       credentials: 'same-origin',
+      mode: 'same-origin',
       headers: {
         'Content-Type': 'application/json'
       }

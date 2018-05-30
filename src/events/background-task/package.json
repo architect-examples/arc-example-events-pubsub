@@ -2,7 +2,7 @@
   "name": "test-pubsub-background-task",
   "dependencies": {
     "@architect/data": "^2.0.2",
-    "@architect/functions": "^1.8.4",
+    "@architect/functions": "^1.8.6",
     "run-series": "^1.1.8"
   }
 }

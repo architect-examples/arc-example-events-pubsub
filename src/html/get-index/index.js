@@ -13,12 +13,23 @@ function route(req, res) {
 </head>
 <body>
 
-<form action=${req._url('/background')} method=post>
-  <input type=text name=background>
-  <button>Start Task<button>
-</form>
+<div class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">&nbsp;</div>
+    <div class="pure-u-1 pure-u-md-1-3">
+    
+      <form action=${req._url('/background')} method=post>
+        <input type=text name=background>
+        <button>Start Task</button>
+      </form>
 
-<div id=tasks>Loading tasks..</div>
+      <hr>
+
+      <div id=tasks>Loading tasks..</div>
+    
+    </div>
+    <div class="pure-u-1 pure-u-md-1-3">&nbsp;</div>
+</div>
+
 
 <script type=module crossorigin src=${req._url('/index.js')}></script>
 </body>

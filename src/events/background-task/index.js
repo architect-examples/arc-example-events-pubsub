@@ -20,7 +20,7 @@ function handler(record, callback) {
     },
     function progress(callback) {
       // after update the status to 'almost done' after 10-30 seconds
-      let timeout = random(10*1000, 30*1000)
+      let timeout = random(3*1000, 10*1000)
       setTimeout(function _delay() {
         record.status = 'processing'
         data.tasks.put(record, callback) 
@@ -28,7 +28,7 @@ function handler(record, callback) {
     },
     function done(callback) {
       // update the status to 'done' after an additional 10-30 seconds
-      let timeout = random(10*1000, 30*1000)
+      let timeout = random(10*1000, 20*1000)
       setTimeout(function _delay() {
         record.status = 'complete'
         data.tasks.put(record, callback) 
