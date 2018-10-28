@@ -1,4 +1,5 @@
 let arc = require('@architect/functions')
+let url = arc.http.helpers.url
 let path = require('path')
 let fs = require('fs')
 let pure = path.join(__dirname, 'node_modules', 'purecss', 'build', 'pure-min.css')
@@ -17,7 +18,7 @@ function route(req, res) {
     <div class="pure-u-1 pure-u-md-1-3">&nbsp;</div>
     <div class="pure-u-1 pure-u-md-1-3">
     
-      <form action=${req._url('/background')} method=post>
+      <form action=${url('/background')} method=post>
         <input type=text name=background>
         <button>Start Task</button>
       </form>
@@ -31,11 +32,11 @@ function route(req, res) {
 </div>
 
 
-<script type=module crossorigin src=${req._url('/index.js')}></script>
+<script type=module crossorigin src=${url('/index.js')}></script>
 </body>
 </html>
   `
   res({html})
 }
 
-exports.handler = arc.html.get(route)
+exports.handler = arc.http(route)

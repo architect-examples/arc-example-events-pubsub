@@ -1,7 +1,0 @@
-{
-  "name": "test-pubsub-get-api",
-  "dependencies": {
-    "@architect/data": "^2.0.2",
-    "@architect/functions": "^1.8.4"
-  }
-}

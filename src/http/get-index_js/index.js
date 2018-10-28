@@ -7,4 +7,4 @@ function route(req, res) {
   res({js})
 }
 
-exports.handler = arc.js.get(route)
+exports.handler = arc.http(route)
