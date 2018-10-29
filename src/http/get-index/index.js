@@ -18,9 +18,9 @@ function route(req, res) {
     <div class="pure-u-1 pure-u-md-1-3">&nbsp;</div>
     <div class="pure-u-1 pure-u-md-1-3">
     
-      <form action=${url('/background')} method=post>
+      <form action=${url('/background')} method=post class=pure-form>
         <input type=text name=background>
-        <button>Start Task</button>
+        <button type=submit class=pure-button pure-button-primary>Start Task</button>
       </form>
 
       <hr>
